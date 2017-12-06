@@ -13,7 +13,7 @@ export class MoviesAddComponent implements OnInit {
   title: string;
   movies: Movie[];
 
-  constructor(private movieService: MovieService, private router: Router) { 
+  constructor(private movieService: MovieService, private router: Router) {
 
   }
 
@@ -41,7 +41,7 @@ export class MoviesAddComponent implements OnInit {
       (err) => {
         console.log(err);
       }
-    )
+    );
   }
 
 }

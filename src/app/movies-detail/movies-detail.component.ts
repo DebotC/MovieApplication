@@ -19,7 +19,7 @@ export class MoviesDetailComponent implements OnInit {
     this.movieService.getMovie(movieId).subscribe(
       (res) => {
         this.movie = res;
-      }, 
+      },
       (err) => {
         console.log(err);
       }
@@ -30,7 +30,7 @@ export class MoviesDetailComponent implements OnInit {
     this.movieService.deleteMovie(this.movie.id).subscribe(
       (res) => {
         this.router.navigate(['/movies']);
-      }, 
+      },
       (err) => {
         console.log(err);
       }
