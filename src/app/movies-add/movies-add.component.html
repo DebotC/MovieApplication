@@ -1,0 +1,19 @@
+<form>
+    <div class="row">
+        <div class="input-field col s6">
+          <input placeholder="Title" id="title" type="text" class="validate" name="title" [(ngModel)]="title">
+          <label for="title">First Name</label>
+        </div>
+      </div>
+  <button class="waves-effect waves-light btn" type="btn" (click)="search()">Search</button>
+</form>
+
+<ul class="collection">
+  <li class="collection-item avatar" 
+      *ngFor="let movie of movies">
+      <a (click)="addMovie(movie)">
+          <img [src]="movie.poster" [alt]="movie.title" />
+          <span class="title">{{ movie.title }}</span>
+      </a>
+  </li>
+</ul>

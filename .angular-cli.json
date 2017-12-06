@@ -19,6 +19,7 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "rd",
       "styles": [
+        "../node_modules/mdi/css/materialdesignicons.min.css", 
         "../node_modules/materialize-css/dist/css/materialize.css",
         "styles.css"
       ],

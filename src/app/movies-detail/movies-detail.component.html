@@ -44,5 +44,9 @@
         </div>
         </div>
         </div>
-        </div>
+        <div class="fixed-action-btn" *ngIf="movie">
+            <a (click)="deleteMovie()" class="btn-floating btn-large red">
+            <i class="large mdi mdi-delete-forever"></i>
+            </a>
+            </div> 
 </div>
