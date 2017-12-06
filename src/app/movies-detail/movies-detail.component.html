@@ -1,0 +1,46 @@
+<div class="row">
+  <div class="col s12 m7">
+    <div class="card">
+      <div class="card-image">
+        <img [src]="movie.poster">
+        <span class="card-title">{{ movie.title }}</span>
+      </div>
+  <div class="card-content grey-text text-darken-4">
+    <!-- Use this for every property of a movie -->
+    <div class="row">
+      <span class="col s6"><strong>Year</strong> </span>
+      <span class="col s6">{{ movie.year }}</span>
+    </div>
+    <div class="row"
+      *ngIf="movie.runtime">
+      <span class="col s6"><strong>Runtime</strong> </span>
+      <span class="col s6">{{ movie.runtime }}</span>
+    </div>
+    <div class="row"
+      *ngIf="movie.plot">
+      <span class="col s6"><strong>Plot</strong> </span>
+      <span class="col s6">{{ movie.plot }}</span>
+    </div>
+    <div class="row"
+      *ngIf="movie.rating">
+      <span class="col s6"><strong>Rating</strong> </span>
+      <span class="col s6">{{ movie.rating }}</span>
+    </div>
+    <div class="row"
+      *ngIf="movie.onlineId">
+      <span class="col s6"><strong>Online-id</strong> </span>
+      <span class="col s6">{{ movie.onlineId }}</span>
+    </div>
+    <div class="row"
+      *ngIf="movie.seen">
+      <span class="col s6"><strong>Seen</strong> </span>
+      <span class="col s6">{{ movie.seen }}</span>
+    </div>
+    <!-- end -->  
+  </div>
+  <div class="card-action">
+    <a class="btn" routerLink="REPLACE_WITH_LINK_TO_LIST">Go Back</a>
+  </div>
+  </div>
+  </div>
+  </div>

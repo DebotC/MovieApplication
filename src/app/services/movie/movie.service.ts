@@ -28,7 +28,8 @@ export class MovieService {
       poster: 'https://image.tmdb.org/t/p/w185/qjiskwlV1qQzRCjpV0cL9pEMF9a.jpg',
       year: 2016,
     },
-    { title: 'Star Wars: Episode IX',
+    { id: 5,
+      title: 'Star Wars: Episode IX',
     poster: 'https://image.tmdb.org/t/p/w185/yVYTFvIiKyr6vsrPw3o5C6t2eoL.jpg',
     year: 2019,
     }];
@@ -37,5 +38,9 @@ export class MovieService {
 
   getMovies(): Movie[] {
     return this.movies;
+  }
+
+  getMovie(id: number): Movie {
+    return this.movies.find(movie => movie.id === id);
   }
 }

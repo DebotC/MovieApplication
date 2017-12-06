@@ -7,13 +7,15 @@ import { HeaderComponent } from './header/header.component';
 import { MovieService } from './services/movie/movie.service';
 import { MovieListComponent } from './movie-list/movie-list.component';
 import { routes } from './app.routes';
+import { MoviesDetailComponent } from './movies-detail/movies-detail.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    MovieListComponent
+    MovieListComponent,
+    MoviesDetailComponent
   ],
   imports: [
     BrowserModule,
