@@ -31,7 +31,6 @@ export class MoviesAddComponent implements OnInit {
   }
 
   addMovie(movie: Movie) {
-    console.log(movie.onlineId);
     this.movieService.addMovie(movie.onlineId).subscribe(
       (res) => {
         // res returns a Movie (see MovieService)

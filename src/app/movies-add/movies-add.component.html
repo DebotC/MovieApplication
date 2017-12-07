@@ -22,9 +22,6 @@
 <ul class="collection">
   <li class="collection-item avatar" 
       *ngFor="let movie of movies">
-      <a (click)="addMovie(movie)">
-          <img [src]="movie.poster" [alt]="movie.title" />
-          <span class="title">{{ movie.title }}</span>
-      </a>
+      <rd-movie [movie]="movie" (selected)="addMovie($event)"></rd-movie>
   </li>
 </ul>

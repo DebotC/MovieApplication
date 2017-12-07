@@ -11,6 +11,7 @@ import { MovieListComponent } from './movie-list/movie-list.component';
 import { routes } from './app.routes';
 import { MoviesDetailComponent } from './movies-detail/movies-detail.component';
 import { MoviesAddComponent } from './movies-add/movies-add.component';
+import { MovieComponent } from './movie/movie.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { MoviesAddComponent } from './movies-add/movies-add.component';
     HeaderComponent,
     MovieListComponent,
     MoviesDetailComponent,
-    MoviesAddComponent
+    MoviesAddComponent,
+    MovieComponent
   ],
   imports: [
     BrowserModule,

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Movie } from '../model/movie.model';
 import { MovieService } from '../services/movie/movie.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'rd-movie-list',
@@ -11,7 +12,7 @@ export class MovieListComponent implements OnInit {
 
   movies: Movie[];
 
-  constructor(private movieService: MovieService) {
+  constructor(private movieService: MovieService, private router: Router) {
 
   }
 
@@ -24,6 +25,10 @@ export class MovieListComponent implements OnInit {
         console.log(err);
       }
     );
+  }
+
+  getDetailsOfMovie(movie: Movie) {
+    this.router.navigate(['movies', movie.id]);
   }
 
 }
