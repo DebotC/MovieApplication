@@ -1,11 +1,22 @@
-<form>
+<form #addMovieForm="ngForm" (ngSubmit)="search(title.value)">
     <div class="row">
         <div class="input-field col s6">
-          <input placeholder="Title" id="title" type="text" class="validate" name="title" [(ngModel)]="title">
-          <label for="title">First Name</label>
+          <input placeholder="Title" id="title" type="text" class="validate" 
+                name="title" ngModel required minlength="2" #title="ngModel"
+                [ngClass]="{
+                    'invalid': title.pristine || !title.touched || title.valid
+                }">
+          <label for="title">Title</label>
+          <p *ngIf="title.errors?.required && title.touched">
+            Title is required
+          </p>
+          <p *ngIf="title.errors?.minlength">
+            Title is {{ title.errors.minlength.actualLength }} character long but must be at least {{ title.errors.minlength.requiredLength }} characters long
+          </p>
         </div>
       </div>
-  <button class="waves-effect waves-light btn" type="btn" (click)="search()">Search</button>
+  <button class="waves-effect waves-light btn" type="submit" 
+    [disabled]="addMovieForm.invalid">Search</button>
 </form>
 
 <ul class="collection">

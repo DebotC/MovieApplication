@@ -10,7 +10,6 @@ import { Movie } from '../model/movie.model';
 })
 export class MoviesAddComponent implements OnInit {
 
-  title: string;
   movies: Movie[];
 
   constructor(private movieService: MovieService, private router: Router) {
@@ -20,8 +19,8 @@ export class MoviesAddComponent implements OnInit {
   ngOnInit() {
   }
 
-  search() {
-    this.movieService.lookupMovie(this.title).subscribe(
+  search(title: string) {
+    this.movieService.lookupMovie(title).subscribe(
       (res) => {
         this.movies = res;
       },
